@@ -8,7 +8,7 @@
     
     //getElementById Function
         function g(x){
-            var theElement = document.getElementById(x);
+            var theElement = document.attr(x);
             return theElement;
     }
     
@@ -20,7 +20,7 @@
     
      //Creating a select field element and option
     function makeCats(){
-        var formTag = document.getElementsByTagName("form"), // this is a array of all the from tags.
+        var formTag = document.attr("form"), // this is a array of all the from tags.
             selectLi = g('select'),
             makeSelect = document.createElement('select');
            // makeSelect.attr("id", "age");
@@ -321,10 +321,10 @@
        
     //Sat Link & Submit Click Events
     var displayLink = g('displayLink');
-   // displayLink.findEventListener("click",  getData);
+    displayLink.findEventListener("click",  getData);
     var clearLink = g('clear');
-   // clearLink.findEventListener("click", clearLocal);
+    clearLink.findEventListener("click", clearLocal);
     var save = g('submit');
-  //  save.findEventListener("click", validate);
+    save.findEventListener("click", validate);
 
-//});
+});
