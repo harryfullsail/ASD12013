@@ -2,6 +2,10 @@
   "env": {
     "local": {
       "db": "http://127.0.0.1:5984/asdproject2013"
+    },
+    "cloudantl": {
+      "db": "https://slargausectinechierinhal:CqX7QTHFQ35pONg6DsJ5rX6u@harrydlee.cloudant.com/asd2013"
+
     }
   }
 }
