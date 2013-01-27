@@ -27,3 +27,28 @@ $(document).ready(function() {
 		}
 	});
 });
+
+$(document).ready(function() {
+    $.ajax({
+		"url": "_view/authors",
+		"dataType": "json",
+		"success": function(data) {
+			$.each(data.rows, function(index, authors){
+				var author = authors.value.author; 				
+	    		var website = authors.value.website;				
+				var books = authors.value.books;				
+				var bookSeries =	 authors.value.bookSeries;		
+				var biography = authors.value.biography;	
+				var notes	= authors.value.notes;		
+				;
+				$('#authors').append(
+					$('<li>').append(
+						$('<a>').attr("href", '#')
+							.text(author)
+					)
+				);
+		 	});
+		 	$('#authors').listview('refresh');
+		}
+	});
+});
