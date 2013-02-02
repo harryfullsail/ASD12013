@@ -1,5 +1,5 @@
 $('#home').live("pageshow", function() {
-	$.couch.db("asdproject2013").view("app/books", {
+	$.couch.db("asdcouchproject42013").view("plugin/books", {
 		success: function(data) {
 			//console.log(data);
 			$('#books').empty();
